@@ -18,6 +18,6 @@ if ($_SERVER['REQUEST_METHOD'] === "POST") {
     <title>Cadastrar Barbeiro</title>
 </head>
 <body>
-    
+    Hello World
 </body>
 </html>
