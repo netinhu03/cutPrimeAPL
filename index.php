@@ -29,7 +29,7 @@ if($_SERVER['REQUEST_METHOD'] === "POST"){
     <link rel="stylesheet" href="css/index.css">
 </head>
 <body>
-    <header style="background-color: black; height:160px;">
+    <header>
         <nav>
         <img src="imagens/LogoCut-White.png" alt="Logo CutPrime">
         </nav>
@@ -42,8 +42,7 @@ if($_SERVER['REQUEST_METHOD'] === "POST"){
             <a class="btn"  href="">AGENDAR</a>
         </div>
     </header>
-    <hr>
-    <div style="height:700px;">
+    <main>
         <p>
             <h1 style="text-align: center;">Desde sempre cuidando do seu  estilo.</h1>
         </p>
@@ -68,10 +67,8 @@ if($_SERVER['REQUEST_METHOD'] === "POST"){
         <p>
             Cras iaculis nec ipsum sit amet finibus. Nulla sagittis purus eu massa consequat faucibus. Donec a arcu odio. Interdum et malesuada fames ac ante ipsum primis in faucibus. Donec id mauris ut odio euismod mollis vitae vitae libero. Nullam rutrum eget ligula quis finibus. Aenean tincidunt augue sed nisl maximus, fringilla ullamcorper sapien ultricies. Proin facilisis enim et odio ultrices placerat. Aliquam erat
         </p>
-    </div>
-    <hr>
-    <footer style="background-color: black; color:white">
-        oi
+    </main>
+    <footer>
     </footer>
 </body>
 </html>
