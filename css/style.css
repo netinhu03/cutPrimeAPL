@@ -1,0 +1,45 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+header{
+    display: flex;
+    border: 1px solid black;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.linkHP{
+    display: flex;
+    justify-content: flex-end;
+    gap: 200px;
+    text-align: center;
+}
+
+.btn{
+    display: flex;
+    background-color: white;
+    color: black;
+    width: 80px;
+    height: 30px;
+    padding: 7px;
+    border-radius: 6px;
+    text-decoration: none;
+    transition: 0.3ms;
+    text-align: center;
+    justify-content: space-between;
+}
+
+#paiCadastroCli{
+    display: flex;
+    justify-content: center;
+    justify-items: center;
+}
+
+.cadastroCli{
+    border: 1px solid black;
+    width:700px;
+    height:600px;
+    border-radius:10px;
+}
