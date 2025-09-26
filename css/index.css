@@ -39,8 +39,8 @@ header a{
 .btn {
     margin: 30px;
     display: flex;
-    justify-content: center;     /* Alinha horizontalmente */
-    align-items: center;         /* Alinha verticalmente */
+    justify-content: center;
+    align-items: center;
     background-color: white;
     border: 1px solid white;
     border-color: white;

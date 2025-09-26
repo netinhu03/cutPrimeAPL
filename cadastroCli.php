@@ -22,9 +22,9 @@ if($_SERVER['REQUEST_METHOD'] === "POST"){
     <header>
         <h1>CutPrime</h1>      
     </header>
-<main id="paiCadastroCli">
-    <form action="cadastroCli.php" method="post" enctype="multipart/form-data">
-        <h2 style="text-align: center;">Bem-vindo a CutPrime</h2>
+<main>
+    <form method="post" enctype="multipart/form-data">
+        <h2>Bem-vindo a CutPrime</h2>
         <div class="divInput">
         <label for="nome">Nome</label>
         <input id="nome" class="nomeCli" type="text" name="cliente[nome]">
@@ -48,7 +48,7 @@ if($_SERVER['REQUEST_METHOD'] === "POST"){
             <input id="senha" type="password" name="cliente[senha]">
         </div>
         <button name="cadastrar">Cadastrar</button>
-        <p>Já possuo cadastro! <a href="login.php">Login</a></p>
+        <p>Já possuo cadastro! <a href="login.php"><strong>Login</strong></a></p>
     </form>
     
 </main>
