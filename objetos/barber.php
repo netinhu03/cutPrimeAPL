@@ -1,5 +1,6 @@
 <?php
-class barber{
+
+class barbeiro{
     public $idBarbeiro;
     public $nomeBarber;
     public $telefone;
@@ -20,16 +21,17 @@ class barber{
         return $resultado->fetchALL(PDO::FETCH_OBJ);
     }
 
-    public function lerBarber($nomeBarber){
+    public function lerBarbeiro($nomeBarber){
         $nomeBarber = "%" . $nomeBarber . "%";
         $sql = "SELECT * FROM barbeiro WHERE nomeBarber LIKE :nomeBarber";
         $resultado = $this->bd->prepare($sql);
         $resultado->bindParam(':nomeBarber' , $nomeBarber);
         $resultado->execute();
+
         return $resultado->fetchALL(PDO::FETCH_OBJ);
     }
 
-    public function pesquisaBarber($idBarbeiro){
+    public function pesquisaBarbeiro($idBarbeiro){
         $sql = "SELECT * FROM barbeiro WHERE idBarbeiro LIKE :idBarbeiro";
         $resultado = $this->bd->prepare($sql);
         $resultado->bindParam(':idBarbeiro' , $idBarbeiro);
