@@ -20,7 +20,7 @@ if($_SERVER['REQUEST_METHOD'] === "POST"){
 </head>
 <body>
     <header>
-        <h1>CutPrime</h1>      
+        <h1>Cadastro Clientes</h1>      
     </header>
 <main>
     <form method="post" enctype="multipart/form-data">
