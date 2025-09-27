@@ -23,7 +23,7 @@ if ($_SERVER['REQUEST_METHOD'] === "POST") {
         <h1>Cadastro Funcionários</h1>      
     </header>
 <main>
-    <form method="post" enctype="multipart/form-data">
+    <form action="cadastroBarber.php" method="post" enctype="multipart/form-data">
         <h2>Bem-vindo a CutPrime</h2>
         <div class="divInput">
         <label for="nome">Nome</label>

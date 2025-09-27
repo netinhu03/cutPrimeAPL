@@ -31,6 +31,9 @@ if($_SERVER['REQUEST_METHOD'] === "POST"){
 <body>
     <header>
         <nav>
+        <?php
+            include 'topo.php';
+        ?>
         <img src="imagens/LogoCut-White.png" alt="Logo CutPrime">
         </nav>
         <div class="linkHP">
