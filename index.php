@@ -2,6 +2,7 @@
 include_once "configs/database.php";
 include_once "objetos/clientes.php";
 include_once "objetos/clienteController.php";
+include_once 'session.php';
 
 $controller = new clienteController();
 $clientes = $controller->index();

@@ -89,22 +89,30 @@ Class cliente{
 
     public function login(){
         $sql = 'SELECT * FROM cliente WHERE email = :email';
-        $stmt = $this->bd->prepare('email', $this->email, PDO::PARAM_STR);
+        $stmt = $this->bd->prepare($sql);
         $stmt->bindParam(':email', $this->email, PDO::PARAM_STR);
         $stmt->execute();
         $resultado = $stmt->fetch(PDO::FETCH_OBJ);
 
+        session_start();
+
         if ($resultado){
             if (password_verify($this->senha, $resultado->senha)){
                 session_start();
+                $_SESSION['erro'] = 'senha correta';
                 $_SESSION['cliente'] = $resultado;
                 header('Location: index.php');
-                exit;
+                exit();
             }else{
+                $_SESSION['erro'] = 'senha incorreta';
                 header('Location: login.php');
-                exit;
+                exit();
             }
+        } else {
+            $_SESSION['erro'] = 'user não encontrado';
         }
+
+        header('Location: test.php');
     }
 }
 ?>

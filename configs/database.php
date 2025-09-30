@@ -3,7 +3,7 @@
 use function PHPSTORM_META\type;
 
 Class Database{
-    private $host = "127.0.0.1:3306"; //em casa a porta é "3306" no Senac é "3316"
+    private $host = "127.0.0.1:3316"; //em casa a porta é "3306" no Senac é "3316"
     private $banco = "cutprime";
     private $usuario = "root";
     private $senha = "123456";

@@ -3,12 +3,10 @@
 ?>
 
 <span>
-    Olá, <?= $_SESSION['cliente']->nome ?>
+    Olá, <?= $_SESSION['cliente']->nomeCli ?>
+    <a href="logout.php">Sair</a>
 </span>
-<a href="logout.php">Sair</a>
 
 <?php
     endif;
 ?>
-
-<a href="cadastroCli.php">Sair</a>
