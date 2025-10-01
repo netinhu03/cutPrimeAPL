@@ -105,14 +105,12 @@ Class cliente{
                 exit();
             }else{
                 $_SESSION['erro'] = 'senha incorreta';
-                header('Location: login.php');
+                header('Location: loginCli.php');
                 exit();
             }
         } else {
             $_SESSION['erro'] = 'user não encontrado';
         }
-
-        header('Location: test.php');
     }
 }
 ?>
