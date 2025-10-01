@@ -33,6 +33,7 @@ if($_SERVER['REQUEST_METHOD'] === 'POST'){
         </div>
         <button name="login">Login</button>
         <p>Não possuo login<a href="cadastroCli.php"><strong> Cadastrar-se</strong></a></p>
+        <p><a href="loginBarber.php"><strong> Barbeiro</strong></a></p>
     </form>
     <div>
         <img src="imagens/LogoCut-Black.png" alt="logo">

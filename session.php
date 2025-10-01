@@ -3,7 +3,7 @@
 session_start();
 
 if(!isset($_SESSION["cliente"])){
-    header("Location: login.php");
+    header("Location: loginCli.php");
     exit;
 }
 ?>
