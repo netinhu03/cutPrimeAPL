@@ -24,7 +24,7 @@ class clienteController{
         return $this->cliente->pesquisaCliente($idCliente);
     }
 
-    public function cadastrarCliente($dados, $arquivo){
+    public function cadastrarCliente($dados){
         $this->cliente->cpf = $dados['cpf'];
         $this->cliente->nomeCli = $dados['nome'];
         $this->cliente->telefone = $dados['telefone'];

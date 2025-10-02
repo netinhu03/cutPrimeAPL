@@ -48,7 +48,7 @@ Class agendamento{
     public function atualizar(){
         $sql = "UPDATE agendamento SET data_hora = :data_hora, idBarbeiro = :idBarbeiro, idServico = :idServico WHERE idAgendamento = idAgendamento";
         $stmt = $this->bd->prepare($sql);
-        $stmt->bindParam(':data_hora', $this->data_hora, PDO::PARAM_STR); //dúvidas
+        $stmt->bindParam(':data_hora', $this->data_hora, PDO::PARAM_STR);
         $stmt->bindParam('idCliente', $this->idCliente, PDO::PARAM_INT);
         $stmt->bindParam(':idBarbeiro', $this->idBarbeiro, PDO::PARAM_INT);
         $stmt->bindParam(':telefone', $this->idServico, PDO::PARAM_INT);

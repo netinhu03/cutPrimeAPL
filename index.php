@@ -9,7 +9,7 @@ $clientes = $controller->index();
 global $alunos;
 $a = null;
 
-if($_SERVER['REQUEST_METHOD'] === "POST"){
+/*f($_SERVER['REQUEST_METHOD'] === "POST"){
     if(isset($_POST['pesquisa'])){
         $a = $controller->pesquisarCliente($_POST['pesquisa']);
 
@@ -18,7 +18,8 @@ if($_SERVER['REQUEST_METHOD'] === "POST"){
     if(isset($_GET['excluir'])){
        $controller->excluirCliente($_GET['excluir']); 
     }
-}
+}*/
+
 ?>
 
 <!DOCTYPE html>
