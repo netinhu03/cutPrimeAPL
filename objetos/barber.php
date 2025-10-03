@@ -21,6 +21,14 @@ class barbeiro{
         return $resultado->fetchALL(PDO::FETCH_OBJ);
     }
 
+      public function lerBarbeiros(){
+        $sql = "SELECT idBarbeiro, nomeBarber FROM barbeiro";
+        $resultado = $this->bd->query($sql);
+        $resultado->execute();
+
+        return $resultado->fetchALL(PDO::FETCH_ASSOC);
+    }
+
     public function lerBarbeiro($nomeBarber){
         $nomeBarber = "%" . $nomeBarber . "%";
         $sql = "SELECT * FROM barbeiro WHERE nomeBarber LIKE :nomeBarber";

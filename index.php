@@ -41,7 +41,7 @@ $a = null;
         <div class="linkHP">
             <a style="color: white;" class="inicioHP" href="index.php">INÍCIO</a>
             <a style="color: white;" class="quemSomos" href="">QUEM SOMOS</a>
-            <a style="color: white;" class="nossoEndereco" href="">NOSSO ENDEREÇO</a>
+            <a style="color: white;" class="nossoEndereco" href="">MEUS AGENDAMENTOS</a>
         </div>
         <div>
             <a class="btn"  href="">AGENDAR</a>

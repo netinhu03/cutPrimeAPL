@@ -16,6 +16,10 @@ class barbeiroController{
         return $this->barbeiro->lerTodos();
     }
 
+     public function listarBarbeiros(){
+         return $this->barbeiro->lerBarbeiros();
+    }
+
     public function pesquisaBarber($nomeBarber){
         return $this->barbeiro->lerBarbeiro($nomeBarber);
     }

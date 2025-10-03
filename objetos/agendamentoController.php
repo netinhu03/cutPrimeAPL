@@ -16,7 +16,10 @@ class agendamentoController{
         return $this->agendamento->lerTodos();
     }
 
-    public function cadastrarAgendamento($dados){ //criar nome na hora do cadastro
+   
+    
+
+    public function cadastrarAgenda($dados){ //criar nome na hora do cadastro
         $this->agendamento->data_hora = $dados['data_hora'];
         $this->agendamento->idCliente = $dados['idCliente'];
         $this->agendamento->idBarbeiro = $dados['idBarbeiro'];
@@ -35,11 +38,19 @@ class agendamentoController{
         $this->agendamento->idBarbeiro = $dados['idBarbeiro'];
         $this->agendamento->idServico = $dados['idServico'];
 
-        if($this->agendamento->cadastrarAgendamento()){
+        if($this->agendamento->atualizar()){
             header("Location: index.php");
             exit();
         }
         return false;
+    }
+
+    public function excluirAgendamento($idAgendamento){
+        $this->agendamento->idAgendamento = $idAgendamento;
+
+        if($this->agendamento->excluir()){
+            header("Location: index.php");
+        }
     }
 
 
