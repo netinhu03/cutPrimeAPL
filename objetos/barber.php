@@ -21,7 +21,7 @@ class barbeiro{
         return $resultado->fetchALL(PDO::FETCH_OBJ);
     }
 
-      public function lerBarbeiros(){
+    public function lerBarbeiros(){
         $sql = "SELECT idBarbeiro, nomeBarber FROM barbeiro";
         $resultado = $this->bd->query($sql);
         $resultado->execute();

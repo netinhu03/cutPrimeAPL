@@ -50,7 +50,7 @@ Class cliente{
          $stmt->bindParam(':email', $this->email, PDO::PARAM_STR);
          $stmt->bindParam(':senha', $senha_hash, PDO::PARAM_STR);
 
-         if ($stmt->execute()){
+         if($stmt->execute()){
             return true;
          }else{
             return false;

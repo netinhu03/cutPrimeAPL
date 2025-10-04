@@ -20,7 +20,7 @@ class agendamentoController{
     
 
     public function cadastrarAgenda($dados){ //criar nome na hora do cadastro
-        $this->agendamento->data_hora = $dados['data_hora'];
+        $this->agendamento->data_hora = $dados['data_hora'];    
         $this->agendamento->idCliente = $dados['idCliente'];
         $this->agendamento->idBarbeiro = $dados['idBarbeiro'];
         $this->agendamento->idServico = $dados['idServico'];
