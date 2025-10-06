@@ -2,7 +2,7 @@
 include_once "configs/database.php";
 include_once "objetos/clientes.php";
 include_once "objetos/clienteController.php";
-include_once 'session.php';
+include_once "session.php";
 
 $controller = new clienteController();
 $clientes = $controller->index();
@@ -44,7 +44,7 @@ $a = null;
             <a style="color: white;" class="nossoEndereco" href="">MEUS AGENDAMENTOS</a>
         </div>
         <div>
-            <a class="btn"  href="">AGENDAR</a>
+            <a class="btn"  href="cadastroAgenda.php">AGENDAR</a>
         </div>
     </header>
     <main>

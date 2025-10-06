@@ -13,11 +13,12 @@ $servicos = $servicoController->listarServicos();
 $db = new Database();
 $conn = $db->conectar();
 
+
 if($_SERVER['REQUEST_METHOD'] === "POST"){
     $controller = new agendamentoController();
 
     if(isset($_POST['cadastrar'])){
-        $controller->cadastrarAgenda($_POST);
+        $controller->cadastrarAgenda($_POST['agendamento']);
     }
 }
 ?>
@@ -39,7 +40,7 @@ if($_SERVER['REQUEST_METHOD'] === "POST"){
         <h2>Realizar Agendamento</h2>
         <div class="divInput">
             <label for="barbeiro">Barbeiro</label>
-            <select name="idBarbeiro" id="barbeiro">
+            <select name='agendamento[idBarbeiro]' id="barbeiro">
                 <?php foreach($barbeiros as $barbeiro): ?>
                     <option value="<?= $barbeiro['idBarbeiro']?>"><?= $barbeiro['nomeBarber']?></option>
                 <?php endforeach; ?>
@@ -47,7 +48,7 @@ if($_SERVER['REQUEST_METHOD'] === "POST"){
         </div>
         <div>
             <label for="servico">Serviço</label>
-            <select name="idServico" id="servico">
+            <select name='agendamento[servico]' id="servico">
                 <?php foreach($servicos as $servico): ?>
                     <option value="<?= $servico['idServico']?>"><?= $servico['nomeServico']?></option>
                 <?php endforeach; ?>
@@ -55,7 +56,7 @@ if($_SERVER['REQUEST_METHOD'] === "POST"){
         </div>
         <div class="divInput">
             <label for="data_hora">Data e Horário</label>
-            <input id="data_hora" type="datetime-local" name="data_hora">
+            <input id="data_hora" type="datetime-local" name='agendamento[data_hora]'>
         </div>
         <button name="cadastrar">Confirmar</button>
     </form>

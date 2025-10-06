@@ -2,6 +2,8 @@
 include_once 'configs/database.php';
 include_once 'agendamentos.php';
 
+session_start();
+
 class agendamentoController{
     private $bd;
     private $agendamento;
@@ -21,9 +23,9 @@ class agendamentoController{
 
     public function cadastrarAgenda($dados){ //criar nome na hora do cadastro
         $this->agendamento->data_hora = $dados['data_hora'];    
-        $this->agendamento->idCliente = $dados['idCliente'];
+        $this->agendamento->idCliente = $_SESSION['cliente']->idCliente;
         $this->agendamento->idBarbeiro = $dados['idBarbeiro'];
-        $this->agendamento->idServico = $dados['idServico'];
+        $this->agendamento->idServico =  $dados['servico'];
 
         if($this->agendamento->cadastrarAgendamento()){ //certo
             header("Location: index.php");
@@ -34,7 +36,6 @@ class agendamentoController{
 
     public function atualizar($dados){
         $this->agendamento->data_hora = $dados['data_hora'];
-        $this->agendamento->idCliente = $dados['idCliente'];
         $this->agendamento->idBarbeiro = $dados['idBarbeiro'];
         $this->agendamento->idServico = $dados['idServico'];
 

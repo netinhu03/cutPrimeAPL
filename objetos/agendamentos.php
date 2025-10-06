@@ -36,7 +36,7 @@ Class agendamento{
         $stmt->bindParam(':data_hora', $this->data_hora, PDO::PARAM_STR);
         $stmt->bindParam('idCliente', $this->idCliente, PDO::PARAM_INT);
         $stmt->bindParam(':idBarbeiro', $this->idBarbeiro, PDO::PARAM_INT);
-        $stmt->bindParam(':telefone', $this->idServico, PDO::PARAM_INT);
+        $stmt->bindParam(':idServico', $this->idServico, PDO::PARAM_INT);
 
         if($stmt->execute()){
             return true;
