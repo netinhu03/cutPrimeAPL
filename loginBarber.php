@@ -19,17 +19,18 @@ if($_SERVER['REQUEST_METHOD'] === 'POST'){
 </head>
 <body>
     <header>
+        Login Barbeiros
     </header>
 <main>
     <form action="loginBarber.php" method="post" enctype="multipart/form-data">
         <h2>Bem-vindo de volta!</h2>
         <div class="divInput">
             <label for="email">Email</label>
-            <input id="email" type="text" name="cliente[email]">
+            <input id="email" type="text" name="barbeiro[email]">
         </div>
         <div class="divInput">
             <label for="senha">Senha</label>
-            <input id="senha" type="password" name="cliente[senha]">
+            <input id="senha" type="password" name="barbeiro[senha]">
         </div>
         <button name="login">Login</button>
     </form>

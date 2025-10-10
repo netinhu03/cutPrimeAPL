@@ -101,16 +101,22 @@ class barbeiro{
         $stmt->execute();
         $resultado = $stmt->fetch(PDO::FETCH_OBJ);
 
+        session_start();
+
         if($resultado){
             if(password_verify($this->senha, $resultado->senha)){
                 session_start();
+                $_SESSION['erro'] = 'senha correta';
                 $_SESSION['barbeiro'] = $resultado;
-                header('Location: index.php');
-                exit;
+                header('Location: telaBarbeiro.php');
+                exit();
             } else {
-                header('Location: login.php');
+                $_SESSION['erro'] = 'senha incorreta';
+                header('Location: loginBarber.php');
                 exit;
             }
+        }else{
+            $_SESSION['erro'] = 'user não econtrado';
         }
     }
 }

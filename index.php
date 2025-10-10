@@ -24,36 +24,41 @@ $a = null;
 
 <!DOCTYPE html>
 <html lang="pt-br">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>HomePage CutPrime</title>
     <link rel="stylesheet" href="css/index.css">
 </head>
+
 <body>
-    
+
     <header>
         <nav>
-        <?php
-            include 'topo.php';
-        ?>
-        <img src="imagens/LogoCut-White.png" alt="Logo CutPrime">
+            <img src="imagens/LogoCut-White.png" alt="Logo CutPrime">
         </nav>
         <div class="linkHP">
-            <a style="color: white;" class="inicioHP" href="index.php">INÍCIO</a>
-            <a style="color: white;" class="quemSomos" href="">QUEM SOMOS</a>
-            <a style="color: white;" class="nossoEndereco" href="">MEUS AGENDAMENTOS</a>
+            <a style="color: white;" class="inicioHP" href="index.php"><strong>INÍCIO</strong></a>
+            <a style="color: white;" class="quemSomos" href=""><strong>QUEM SOMOS</strong></a>
+            <a style="color: white;" class="nossoEndereco" href=""><strong>MEUS AGENDAMENTOS</strong></a>
         </div>
-        <div>
-            <a class="btn"  href="cadastroAgenda.php">AGENDAR</a>
+        <div class="topo">
+            <?php
+            include 'topo.php';
+            ?>
         </div>
     </header>
     <main>
-    <video autoplay muted loop
-        src="videos/6a2f4a4de969ddd3309646c1df43faeb~4.mp4">
-    </video>
+        <video autoplay muted loop
+            src="videos/6a2f4a4de969ddd3309646c1df43faeb~4.mp4">
+        </video>
+        <div class="bnt-container">
+            <a class="btn" href="cadastroAgenda.php">AGENDAR</a>
+        </div>
     </main>
     <footer>
     </footer>
 </body>
+
 </html>

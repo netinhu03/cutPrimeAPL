@@ -4,7 +4,8 @@
 
 <span>
     Olá, <?= $_SESSION['cliente']->nomeCli ?>
-    <a href="logout.php">Sair</a>
+    <br>
+    <a class="logout" href="logout.php">Sair</a>
 </span>
 
 <?php
