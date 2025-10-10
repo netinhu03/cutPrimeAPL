@@ -62,6 +62,11 @@ main{
     flex: 1;
 }
 
+img{
+    width: 100vw;
+    height: 100vh;
+}
+
 footer{
     height: 90px;
     background-color: #1b263b;
