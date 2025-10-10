@@ -31,6 +31,7 @@ $a = null;
     <link rel="stylesheet" href="css/index.css">
 </head>
 <body>
+    
     <header>
         <nav>
         <?php
@@ -48,7 +49,9 @@ $a = null;
         </div>
     </header>
     <main>
-        <img src="imagens/bkg_cadastro.webp" alt="">
+    <video autoplay muted loop
+        src="videos/6a2f4a4de969ddd3309646c1df43faeb~4.mp4">
+    </video>
     </main>
     <footer>
     </footer>
