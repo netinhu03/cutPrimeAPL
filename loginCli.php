@@ -1,10 +1,17 @@
 <?php
 include_once 'objetos/clienteController.php';
 
-if($_SERVER['REQUEST_METHOD'] === 'POST'){
-    if(isset($_POST['cliente']['email']) && isset($_POST['cliente']['senha'])){
+$erro = null;
+
+if ($_SERVER['REQUEST_METHOD'] === 'POST') {
+    $email = trim($_POST['cliente']['email'] ?? '');
+    $senha = trim($_POST['cliente']['senha'] ?? '');
+
+    if (!empty($email) && !empty($senha)) {
         $controller = new clienteController();
-        $controller->login($_POST['cliente']['email'], $_POST['cliente']['senha']);
+        $controller->login($email, $senha);
+    } else {
+        $erro = "Preencha todos os campos.";
     }
 }
 ?>
@@ -32,6 +39,14 @@ if($_SERVER['REQUEST_METHOD'] === 'POST'){
             <label for="senha">Senha</label>
             <input id="senha" type="password" name="cliente[senha]">
         </div>
+
+        <?php 
+            if($erro){
+                echo $erro;
+            }
+
+        ?>
+
         <button name="login">Login</button>
         <p>Não possuo login<a href="cadastroCli.php"><strong> Cadastrar-se</strong></a></p>
         <p>Não sou cliente<a href="loginBarber.php"><strong> Barbeiro</strong></a></p>

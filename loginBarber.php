@@ -1,10 +1,15 @@
 <?php
 include_once 'objetos/barbeiroController.php';
 
-if($_SERVER['REQUEST_METHOD'] === 'POST'){
-    if(isset($_POST['barbeiro']['email']) && isset($_POST['barbeiro']['email'])){
+if ($_SERVER['REQUEST_METHOD'] === 'POST') {
+    $email = trim($_POST['barbeiro']['email'] ?? '');
+    $senha = trim($_POST['barbeiro']['senha'] ?? '');
+
+    if (!empty($email) && !empty($senha)) {
         $controller = new barbeiroController();
-        $controller->login($_POST['barbeiro']['email'], $_POST['barbeiro']['senha']);
+        $controller->login($email, $senha);
+    } else {
+        echo "Preencha todos os campos.";
     }
 }
 ?>

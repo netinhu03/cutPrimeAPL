@@ -1,5 +1,13 @@
 <?php
 
+
+session_start();
+
+if(!isset($_SESSION["barbeiro"])){
+    header("Location: loginBarber.php");
+    exit;
+} 
+
 ?>
 
 <!DOCTYPE html>
@@ -7,7 +15,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Tela Barbeiros</title>
+    <title>Gerenciamento</title>
 </head>
 <body>
     

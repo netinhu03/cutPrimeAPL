@@ -105,10 +105,10 @@ class barbeiro{
 
         if($resultado){
             if(password_verify($this->senha, $resultado->senha)){
+                    
                 session_start();
-                $_SESSION['erro'] = 'senha correta';
                 $_SESSION['barbeiro'] = $resultado;
-                header('Location: telaBarbeiro.php');
+                header('Location: ./telaBarbeiro.php');
                 exit();
             } else {
                 $_SESSION['erro'] = 'senha incorreta';
