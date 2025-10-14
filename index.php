@@ -58,6 +58,7 @@ $a = null;
         </div>
     </main>
     <footer>
+        © 2025 - Feito por Ademir Marques da Silva Neto.
     </footer>
 </body>
 
