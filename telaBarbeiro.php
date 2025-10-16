@@ -1,13 +1,15 @@
 <?php
+include_once 'objetos/barbeiroController.php';
+include_once 'objetos/agendamentoController.php';
 
+$controller = new barbeiroController();
 
-session_start();
-
-if(!isset($_SESSION["barbeiro"])){
+    if(!isset($_SESSION["barbeiro"])){
     header("Location: loginBarber.php");
-    exit;
-} 
+    exit();
+    }
 
+$agendamentos = $controller->listarAgendamentos($_SESSION['barbeiro']->idBarbeiro);
 ?>
 
 <!DOCTYPE html>
@@ -27,8 +29,13 @@ if(!isset($_SESSION["barbeiro"])){
             src="videos/6a2f4a4de969ddd3309646c1df43faeb~4.mp4">
         </video>
 
-        <div class="divLista" >
-
+        <div class="divListas">
+            <div class="lista1">
+                <h2>Bem-vindo, <?php echo $barbeiro['nomeBarber']; ?>!</h2>
+                <?php foreach($agendamentos as $agendamento) : ?>
+                    <?php var_dump($agendamento) ?>
+                <?php endforeach; ?>
+            </div>
         </div>
     </main>
     <footer>

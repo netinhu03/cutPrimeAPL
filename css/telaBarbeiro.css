@@ -9,6 +9,7 @@ body{
     width: 100vw;
     height: 100vh;
     overflow: hidden;
+    color: white;
 }
 
 header{
@@ -39,11 +40,12 @@ video{
     filter: brightness(0.10);
 }
 
-.divLista{
+.divListas{
     display: flex;
     justify-content: center;
     align-items: center;
     flex-direction: column;
+    color: white;
     border: 2px solid rgba(255, 255, 255, 0.575);
     width:850px;
     height: 600px;

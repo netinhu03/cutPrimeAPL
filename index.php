@@ -6,7 +6,7 @@ include_once "session.php";
 
 $controller = new clienteController();
 $clientes = $controller->index();
-global $alunos;
+global $clientes;
 $a = null;
 
 /*f($_SERVER['REQUEST_METHOD'] === "POST"){

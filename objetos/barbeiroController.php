@@ -72,6 +72,11 @@ class barbeiroController{
         $this->barbeiro->senha = $senha;
         $this->barbeiro->login();
     }
+
+    public function listarAgendamentos($idBarbeiro){
+        $this->barbeiro->idBarbeiro = $idBarbeiro;
+        return $this->barbeiro->listarAgendamentos();
+    }
     
 }
 ?>

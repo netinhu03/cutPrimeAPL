@@ -119,5 +119,13 @@ class barbeiro{
             $_SESSION['erro'] = 'user não econtrado';
         }
     }
+
+    public function listarAgendamentos(){
+        $sql = 'SELECT * FROM agendamento WHERE idBarbeiro = :idBarbeiro';
+        $stmt = $this->bd->prepare($sql);
+        $stmt->bindParam(':idBarbeiro', $this->idBarbeiro);
+        $stmt->execute();
+        return  $stmt->fetch(PDO::FETCH_OBJ);
+    }
 }
 ?>
