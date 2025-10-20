@@ -18,16 +18,13 @@ class agendamentoController{
         return $this->agendamento->lerTodos();
     }
 
-   
-    
-
-    public function cadastrarAgenda($dados){ //criar nome na hora do cadastro
+    public function cadastrarAgenda($dados){
         $this->agendamento->data_hora = $dados['data_hora'];    
         $this->agendamento->idCliente = $_SESSION['cliente']->idCliente;
         $this->agendamento->idBarbeiro = $dados['idBarbeiro'];
         $this->agendamento->idServico =  $dados['servico'];
 
-        if($this->agendamento->cadastrarAgendamento()){ //certo
+        if($this->agendamento->cadastrarAgendamento()){
             header("Location: index.php");
             exit();
         }

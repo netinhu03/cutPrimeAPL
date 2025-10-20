@@ -9,17 +9,6 @@ $clientes = $controller->index();
 global $clientes;
 $a = null;
 
-/*f($_SERVER['REQUEST_METHOD'] === "POST"){
-    if(isset($_POST['pesquisa'])){
-        $a = $controller->pesquisarCliente($_POST['pesquisa']);
-
-    }
-}elseif($_SERVER['REQUEST_METHOD'] === "GET"){
-    if(isset($_GET['excluir'])){
-       $controller->excluirCliente($_GET['excluir']); 
-    }
-}*/
-
 ?>
 
 <!DOCTYPE html>

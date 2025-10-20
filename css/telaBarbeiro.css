@@ -42,7 +42,6 @@ video{
 
 .divListas{
     display: flex;
-    justify-content: center;
     align-items: center;
     flex-direction: column;
     color: white;
@@ -51,6 +50,22 @@ video{
     height: 600px;
     border-radius:10px;
     box-shadow: 2px 4px 10px rgba(0, 0, 0, 0.3);
+}
+
+.linhacabecalho{
+    margin-top: 30px;
+    display: flex;
+    height: 40px;
+    width: 40vw;
+    border: 1px solid white;
+    align-items: center;
+    justify-content: center;
+    border-radius: 5px;
+}
+
+span{
+    margin-left: 80px;
+    margin-right: 80px;
 }
 
 footer{
