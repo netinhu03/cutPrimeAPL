@@ -1,13 +1,15 @@
 <?php
-    if(isset($_SESSION['cliente'])):
+if (isset($_SESSION['cliente'])):
 ?>
+<link rel="stylesheet" href="css/topo.css">
 
-<span>
-    Olá, <?= $_SESSION['cliente']->nomeCli ?>
-    <br>
+<div class="topo">
+  <div class="usuario-info">
+    <span>Olá, <?= $_SESSION['cliente']->nomeCli ?></span>
     <a class="logout" href="logout.php">Sair</a>
-</span>
+  </div>
+</div>
 
 <?php
-    endif;
+endif;
 ?>
