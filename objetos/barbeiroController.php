@@ -75,7 +75,7 @@ class barbeiroController{
 
     public function listarAgendamentos($idBarbeiro){
         $this->barbeiro->idBarbeiro = $idBarbeiro;
-        return $this->barbeiro->listarAgendamentos();
+        return $this->barbeiro->listarAgendamentos($idBarbeiro);
     }
     
 }

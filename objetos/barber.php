@@ -120,17 +120,25 @@ class barbeiro{
         }
     }
 
-    public function listarAgendamentos() {
-    $sql = 'SELECT * FROM agendamento WHERE idBarbeiro = :idBarbeiro';
+    public function listarAgendamentos($idBarbeiro) {
+    $sql = "
+        SELECT 
+            a.idAgendamento,
+            a.data_hora,
+            c.nomeCli AS nomeCli,
+            s.nomeServico AS nomeServico
+        FROM agendamento a
+        INNER JOIN cliente c ON a.idCliente = c.idCliente
+        INNER JOIN servico s ON a.idServico = s.idServico
+        WHERE a.idBarbeiro = :idBarbeiro
+        ORDER BY a.data_hora ASC
+    ";
+
     $stmt = $this->bd->prepare($sql);
-    $stmt->bindParam(':idBarbeiro', $this->idBarbeiro);
+    $stmt->bindParam(':idBarbeiro', $idBarbeiro, PDO::PARAM_INT);
     $stmt->execute();
 
-    // Retorna todos os resultados como objetos
-    $agendamentos = $stmt->fetchAll(PDO::FETCH_OBJ);
-
-    // Garante que nunca retorne false
-    return $agendamentos ?: [];
+    return $stmt->fetchAll(PDO::FETCH_OBJ);
 }
 }
 ?>

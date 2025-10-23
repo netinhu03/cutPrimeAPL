@@ -38,16 +38,28 @@ $agendamentos = $controller->listarAgendamentos($_SESSION['barbeiro']->idBarbeir
                 <span>Data e Hora</span>
             </div>
             <table>
-                <?php if($clientes) : ?>
-                    <?php foreach ($clientes as $cliente) : ?>
-                        <tr>
-                            <td><?= $cliente->id ?></td>
+                <?php if (!empty($agendamentos)): ?>
+                    <?php foreach ($agendamentos as $ag): ?>
+                        <tr class="infos">
+                            <td class="um"><?= htmlspecialchars($ag->nomeCli ?? '') ?></td>
+                            <td class="dois"><?= htmlspecialchars($ag->nomeServico ?? '') ?></td>
+                            <td class="tres"><?= date('d/m/Y H:i', strtotime($ag->data_hora)) ?></td>
                         </tr>
-                    <?php endforeach ?>
-                <?php endif ?>
-
+                        <tr>
+                            <td colspan="3">
+                                <hr style="border:1px solid white">
+                            </td>
+                        </tr>
+                    <?php endforeach; ?>
+                <?php else: ?>
+                    <tr>
+                        <td colspan="3" style="text-align:center; color: #aaa;">
+                            Nenhum agendamento encontrado.
+                        </td>
+                    </tr>
+                <?php endif; ?>
         </div>
-        </table>    
+        </table>
     </main>
     <footer>
         © 2025 - Feito por Ademir Marques da Silva Neto.
