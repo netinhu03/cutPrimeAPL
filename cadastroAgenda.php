@@ -63,5 +63,6 @@ if($_SERVER['REQUEST_METHOD'] === "POST"){
 </main>
 </body>
 <footer>
+    © 2025 - Feito por Ademir Marques da Silva Neto.
 </footer>
 </html>

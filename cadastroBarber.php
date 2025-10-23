@@ -25,6 +25,12 @@ if ($_SERVER['REQUEST_METHOD'] === "POST") {
 <main>
     <form action="cadastroBarber.php" method="post" enctype="multipart/form-data">
         <h2>Bem-vindo a CutPrime</h2>
+
+        <select id="tipo" name="barbeiro[tipo]">
+            <option value="adm">Adm</option>
+            <option value="barber">Barbeiro</option>
+        </select>
+
         <div class="divInput">
         <label for="nome">Nome</label>
         <input id="nome" class="nomeBarber" type="text" name="barbeiro[nome]">

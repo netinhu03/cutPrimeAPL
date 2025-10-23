@@ -29,6 +29,9 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 <main>
     <form action="loginBarber.php" method="post" enctype="multipart/form-data">
         <h2>Bem-vindo de volta!</h2>
+
+        
+
         <div class="divInput">
             <label for="email">Email</label>
             <input id="email" type="text" name="barbeiro[email]">
@@ -44,7 +47,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     </div>
 </main>
 <footer>
-    oi
+    © 2025 - Feito por Ademir Marques da Silva Neto.
 </footer>
 </main>
 </body>

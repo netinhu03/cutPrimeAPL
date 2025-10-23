@@ -47,33 +47,50 @@ form h2{
 
 .divInput{
     margin: 10px;
-    margin-bottom: 15px;
+    display: flex;
+    flex-direction: column;
+    border-radius: 20px;
+    justify-content: center;
     font-family: Arial, Helvetica, sans-serif;
 }
 
-label{
-    display: block;
-    margin-bottom: 5px;
+#descricao, #preco{
+    width: 510px;
 }
 
-select {
-    width: 300px;
-    padding: 5px 20px;;
-    border: 3px solid #cccccc85;
-    border-radius: 50px;
-    font-size: 16px;
-    background-color: #fff;
-    appearance: none; /* Remove o estilo padrão */
+#nome, #email, #senha{
+    width: 510px;
+
 }
 
-#data_hora{
-    width: 255px;
-    padding: 5px 20px;;
-    border: 3px solid #cccccc94;
+input{
+    border: 3px solid #c3c3c37c;
+    border-radius: 20px;
+    font-size: 15px;
+    padding: 5px 20px;
+    width: 225px;
+}
+
+button{
+    margin: 70px;
+    border: none;
+    width: 150px;
+    height: 40px;
     border-radius: 50px;
-    font-size: 16px;
-    background-color: #fff;
-    appearance: none; /* Remove o estilo padrão */
+    background-color: #0d1b2a;
+    color: white;
+    font-size: 17px;
+    box-shadow: 2px 4px 10px rgba(0, 0, 0, 0.3);
+}
+
+p{
+    margin: 0px;
+    font-size: 17px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+p a{
+    text-decoration: none;
 }
 
 footer{

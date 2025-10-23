@@ -11,14 +11,15 @@ body{
 }
 
 header{
-    display: flex;
-    background-color: #1b263b;
-    font-family: Arial, Helvetica, sans-serif;
-    color: white;
     height: 100px;
-    border-radius: 0px 0px 10px 10px;
-    justify-content: center;
+    width: 100%;
+    color: white;
+    background-color: #1b263ba8;
+    display: flex;
     align-items: center;
+    justify-content: space-betweens;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 15px;
 }
 
 main{
@@ -97,10 +98,9 @@ p a{
 
 footer{
     display: flex;
-    background-color: #1b263b;
+    background-color: #1b263ba8;
     color: white;
-    height: 90px;
-    border-radius: 10px 10px 0px 0px;
+    height: 70px;
     justify-content: center;
     align-items: center;
 }

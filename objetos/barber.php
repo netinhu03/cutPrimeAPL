@@ -7,6 +7,7 @@ class barbeiro{
     public $email;
     public $senha;
     public $cpf;
+    public $tipo;
     public $bd;
 
     public function __construct($bd){
@@ -50,13 +51,14 @@ class barbeiro{
 
     public function cadastrarBar(){
         $senha_hash = password_hash($this->senha, PASSWORD_DEFAULT);
-        $sql = "INSERT INTO barbeiro(nomeBarber, telefone, email, senha, cpf) VALUES (:nomeBarber, :telefone, :email, :senha, :cpf)";
+        $sql = "INSERT INTO barbeiro(nomeBarber, telefone, email, senha, cpf, tipo) VALUES (:nomeBarber, :telefone, :email, :senha, :cpf, :tipo)";
         $stmt = $this->bd->prepare($sql);
         $stmt->bindParam(':nomeBarber', $this->nomeBarber, PDO::PARAM_STR);
         $stmt->bindParam(':telefone', $this->telefone, PDO::PARAM_STR);
         $stmt->bindParam(':email', $this->email, PDO::PARAM_STR);
         $stmt->bindParam(':senha', $senha_hash, PDO::PARAM_STR);
         $stmt->bindParam(':cpf', $this->cpf, PDO::PARAM_STR);
+        $stmt->bindParam(':tipo', $this->tipo, PDO::PARAM_STR);
 
         if ($stmt->execute()) {
             return true;

@@ -21,12 +21,12 @@ class servicoController{
     }
 
     public function cadastrarServico($dados){
-        $this->servico->nomeServico = $dados['nome'];
+        $this->servico->nomeServico = $dados['nomeServico'];
         $this->servico->descricao = $dados['descricao'];
         $this->servico->preco = $dados['preco'];
 
         if($this->servico->cadastrarSer()){
-            header("Location: index.php");
+            header("Location: telaBarbeiro.php");
             exit();
         }
         return false;

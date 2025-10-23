@@ -56,7 +56,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     </div>
 </main>
 <footer>
-    oi
+    © 2025 - Feito por Ademir Marques da Silva Neto.
 </footer>
 </body>
 </html>

@@ -34,6 +34,7 @@ class barbeiroController{
         $this->barbeiro->email = $dados['email'];
         $this->barbeiro->senha = $dados['senha'];
         $this->barbeiro->cpf = $dados['cpf'];
+        $this->barbeiro->tipo = $dados['tipo'];
 
         if($this->barbeiro->cadastrarBar()){
             header("Location: index.php");

@@ -25,11 +25,20 @@ $agendamentos = $controller->listarAgendamentos($_SESSION['barbeiro']->idBarbeir
 <body>
     <header>
         <strong>GERENCIAMENTO DE AGENDAMENTOS</strong>
+        <?php include_once 'topo.php'; ?>
     </header>
     <main>
         <video autoplay muted loop
             src="videos/6a2f4a4de969ddd3309646c1df43faeb~4.mp4">
         </video>
+
+        <?php
+        if($_SESSION["barbeiro"]->tipo == "adm"):  
+        ?>
+
+        <a class="cadbarber" href="cadastroBarber.php">Cadastrar Barbeiro</a>
+
+        <?php else: ?>
 
         <div class="divListas">
             <div class="linhacabecalho">
@@ -59,7 +68,9 @@ $agendamentos = $controller->listarAgendamentos($_SESSION['barbeiro']->idBarbeir
                     </tr>
                 <?php endif; ?>
         </div>
+        <?php endif; ?>
         </table>
+        <a class="btn" href="cadastroServico.php">Cadastrar Serviço</a>
     </main>
     <footer>
         © 2025 - Feito por Ademir Marques da Silva Neto.
